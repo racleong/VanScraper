@@ -10,7 +10,7 @@ def index():
     con.row_factory = sqlite3.Row
 
     cur = con.cursor()
-    cur.execute("SELECT * FROM vans")
+    cur.execute("SELECT * FROM vans ORDER BY price")
 
     rows = cur.fetchall()
     return render_template('index.html', rows = rows)
