@@ -15,5 +15,5 @@ def index():
     rows = cur.fetchall()
     return render_template('index.html', rows = rows)
 
-   
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
